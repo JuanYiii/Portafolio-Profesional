@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Profesional</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #212529;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #17a2b8;
+    }
+
+    section {
+      padding: 100px 40px 60px;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to right, #007bff, #6610f2);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .accordion-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .accordion {
+      background-color: #e9ecef;
+      color: #212529;
+      cursor: pointer;
+      padding: 1rem;
+      width: 300px;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: background-color 0.3s ease;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .accordion:hover {
+      background-color: #d4d9dd;
+    }
+
+    .panel {
+      padding: 0 1rem;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      border-radius: 0 0 8px 8px;
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+    }
+
+    .panel.open {
+      padding: 1rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.02);
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 10px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .project h3 {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #007bff;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .linkedin-logo {
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#about">Sobre mí</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#scenario">Escenario</a>
+      <a href="#footer">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero animate__animated animate__fadeIn">
+    <h1>Juan Pablo M. Villarreal Gamboa</h1>
+    <p>Ingeniero con enfoque en ganadería, automatización y sostenibilidad</p>
+  </section>
+
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <p>Soy Juan Pablo Villarreal, ingeniero en biosistemas agroalimentarios del Tecnológico de Monterrey, con una formación que combina la producción agropecuaria con el desarrollo de soluciones sustentables y tecnológicas. Me interesa aplicar mis conocimientos para mejorar los procesos productivos y gestionar eficientemente los recursos, enfrentando los retos que presenta el sector agroalimentario en la actualidad.</p>
+    <br>
+    <p>He trabajado en proyectos enfocados en la optimización de sistemas agroalimentarios, incorporando tecnologías de automatización, prácticas sustentables y estrategias de adaptación ante escenarios complejos. Mi enfoque busca siempre equilibrar la productividad con el compromiso ambiental y el impacto social.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Habilidades y Competencias</h2>
+    <div class="accordion-container">
+      <div>
+        <button class="accordion">Técnicas</button>
+        <div class="panel">
+          <ul>
+            <br>
+            <li>Gestión de biosistemas</li>
+            <li>Procesos agrícolas sostenibles</li>
+            <li>Uso eficiente de insumos</li>
+            <li>Normativas en bioingeniería</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <button class="accordion">Tecnológicas</button>
+        <div class="panel">
+          <ul>
+            <br>
+            <li>Automatización agrícola</li>
+            <li>TIC para decisiones</li>
+            <li>Simulación y análisis</li>
+            <li>Plataformas como Arduino</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <button class="accordion">Gestión</button>
+        <div class="panel">
+          <ul>
+            <br>
+            <li>Mejora continua</li>
+            <li>Evaluación de proyectos</li>
+            <li>Enfoque ético y sustentable</li>
+            <li>Trabajo colaborativo</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <button class="accordion">Personales</button>
+        <div class="panel">
+          <ul>
+            <br>
+            <li>Resolución de problemas</li>
+            <li>Creatividad e innovación</li>
+            <li>Compromiso ambiental</li>
+            <li>Liderazgo y comunicación</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Proyectos Destacados</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="imagen-automatizacion.jpg" alt="Proyecto de automatización">
+        <h3 onclick="window.open('Automatizacion.pdf')">Proyecto de Automatización</h3>
+        <p>Diseñé e implementé un sistema de monitoreo y control ambiental utilizando sensores, ESP32 y la plataforma Adafruit IO. Esto con el objetivo de optimizar las condiciones de producción en tiempo real, integrando automatización con soluciones accesibles para el sector agroalimentario.</p>
+      </div>
+
+      <div class="project">
+        <img src="imagen-genetica.jpg" alt="Proyecto de mejora genética">
+        <h3 onclick="window.open('Vacas.pdf')">Mejora Genética Bovina</h3>
+        <p>Desarrollé un proyecto de mejora genética enfocado en optimizar características clave en vacas lecheras, como producción, salud y conformación. Utilicé herramientas como Excel y Python para implementar un sistema de emparejamiento estratégico entre vacas y toros, apoyado en datos fenotípicos y genéticos.</p>
+      </div>
+
+      <div class="project">
+        <img src="imagen-avicola.jpg" alt="Proyecto de producción avícola sostenible">
+        <h3 onclick="window.open('Gallinas.pdf')">Intensificación Sostenible en Avicultura</h3>
+        <p>Analizamos una propuesta de intensificación sostenible en producción avícola ante escenarios de escasez de insumos, evaluando la viabilidad técnica y económica de la misma. Posteriormente, diseñamos una nueva propuesta de manejo y alimentación que optimiza la rentabilidad mientras mantiene el enfoque en la sostenibilidad a largo plazo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scenario">
+    <h2>Desafío profesional: Producción Agrícola</h2>
+    <p>Las cadenas de suministro han sido fuertemente afectadas por la pandemia y conflictos internacionales, causando que las empresas agrícolas busquen mantener su rentabilidad ante el encarecimiento y escasez de insumos como el alimento y los medicamentos para el ganado.</p>
+    <br>
+    <ul>
+      <li><strong>Diagnóstico:</strong> Identificar el impacto.</li>
+      <li><strong>Alternativas alimenticias:</strong> Evaluación de subproductos agrícolas como alternativa. Viabilidad de producción propia.</li>
+      <li><strong>Optimización sanitaria:</strong> Mejorar sanidad para reducir uso de medicamentos.</li>
+      <li><strong>Tecnología:</strong> Uso de sensores para visualizar alteraciones.</li>
+      <li><strong>Selección:</strong> Genética adecuada para condiciones actuales. </li>
+      <li><strong>Evaluación de rentabilidad:</strong> Análisis continuo de resultados.</li>
+    </ul>
+  </section>
+
+  <footer id="footer">
+    <p>Contacto profesional:</p>
+    <a href="https://www.linkedin.com/in/juanpablovillarrealg/" target="_blank">
+      <img src="linkedin-logo.png" alt="LinkedIn" class="linkedin-logo">
+    </a>
+  </footer>
+
+  <script>
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
